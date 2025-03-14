@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/MyShell.dir/main.c.o CMakeFiles/MyShell.dir/src/printUtils.c.o -o MyShell 
+/usr/bin/cc -g CMakeFiles/MyShell.dir/main.c.o CMakeFiles/MyShell.dir/src/PrintUtils.c.o CMakeFiles/MyShell.dir/src/ShellBuilder.c.o CMakeFiles/MyShell.dir/src/CommandExecutor.c.o CMakeFiles/MyShell.dir/src/ErrorHandler.c.o -o MyShell 

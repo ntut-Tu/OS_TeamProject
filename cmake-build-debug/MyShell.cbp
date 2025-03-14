@@ -76,13 +76,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/include/printUtils.h">
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/include/ErrorHandler.h">
+			<Option target="MyShell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/include/PrintUtils.h">
 			<Option target="MyShell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/main.c">
 			<Option target="MyShell"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c">
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c">
+			<Option target="MyShell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c">
+			<Option target="MyShell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c">
+			<Option target="MyShell"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c">
 			<Option target="MyShell"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/quinndu0/CLionProjects/MyShell/CMakeLists.txt">

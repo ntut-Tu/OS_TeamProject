@@ -1,6 +1,9 @@
 //
 // Created by quinndu0 on 2025/3/14.
 //
+#include <stdio.h>
+#include <stdarg.h>
+
 #include "../include/PrintUtils.h"
 
 void runtimePrint(const char *message, ...) {

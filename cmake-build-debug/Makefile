@@ -153,29 +153,101 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/main.c.s
 .PHONY : main.c.s
 
-src/printUtils.o: src/printUtils.c.o
-.PHONY : src/printUtils.o
+src/CommandExecutor.o: src/CommandExecutor.c.o
+.PHONY : src/CommandExecutor.o
 
 # target to build an object file
-src/printUtils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/printUtils.c.o
-.PHONY : src/printUtils.c.o
+src/CommandExecutor.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/CommandExecutor.c.o
+.PHONY : src/CommandExecutor.c.o
 
-src/printUtils.i: src/printUtils.c.i
-.PHONY : src/printUtils.i
+src/CommandExecutor.i: src/CommandExecutor.c.i
+.PHONY : src/CommandExecutor.i
 
 # target to preprocess a source file
-src/printUtils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/printUtils.c.i
-.PHONY : src/printUtils.c.i
+src/CommandExecutor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/CommandExecutor.c.i
+.PHONY : src/CommandExecutor.c.i
 
-src/printUtils.s: src/printUtils.c.s
-.PHONY : src/printUtils.s
+src/CommandExecutor.s: src/CommandExecutor.c.s
+.PHONY : src/CommandExecutor.s
 
 # target to generate assembly for a file
-src/printUtils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/printUtils.c.s
-.PHONY : src/printUtils.c.s
+src/CommandExecutor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/CommandExecutor.c.s
+.PHONY : src/CommandExecutor.c.s
+
+src/ErrorHandler.o: src/ErrorHandler.c.o
+.PHONY : src/ErrorHandler.o
+
+# target to build an object file
+src/ErrorHandler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ErrorHandler.c.o
+.PHONY : src/ErrorHandler.c.o
+
+src/ErrorHandler.i: src/ErrorHandler.c.i
+.PHONY : src/ErrorHandler.i
+
+# target to preprocess a source file
+src/ErrorHandler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ErrorHandler.c.i
+.PHONY : src/ErrorHandler.c.i
+
+src/ErrorHandler.s: src/ErrorHandler.c.s
+.PHONY : src/ErrorHandler.s
+
+# target to generate assembly for a file
+src/ErrorHandler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ErrorHandler.c.s
+.PHONY : src/ErrorHandler.c.s
+
+src/PrintUtils.o: src/PrintUtils.c.o
+.PHONY : src/PrintUtils.o
+
+# target to build an object file
+src/PrintUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/PrintUtils.c.o
+.PHONY : src/PrintUtils.c.o
+
+src/PrintUtils.i: src/PrintUtils.c.i
+.PHONY : src/PrintUtils.i
+
+# target to preprocess a source file
+src/PrintUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/PrintUtils.c.i
+.PHONY : src/PrintUtils.c.i
+
+src/PrintUtils.s: src/PrintUtils.c.s
+.PHONY : src/PrintUtils.s
+
+# target to generate assembly for a file
+src/PrintUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/PrintUtils.c.s
+.PHONY : src/PrintUtils.c.s
+
+src/ShellBuilder.o: src/ShellBuilder.c.o
+.PHONY : src/ShellBuilder.o
+
+# target to build an object file
+src/ShellBuilder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ShellBuilder.c.o
+.PHONY : src/ShellBuilder.c.o
+
+src/ShellBuilder.i: src/ShellBuilder.c.i
+.PHONY : src/ShellBuilder.i
+
+# target to preprocess a source file
+src/ShellBuilder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ShellBuilder.c.i
+.PHONY : src/ShellBuilder.c.i
+
+src/ShellBuilder.s: src/ShellBuilder.c.s
+.PHONY : src/ShellBuilder.s
+
+# target to generate assembly for a file
+src/ShellBuilder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyShell.dir/build.make CMakeFiles/MyShell.dir/src/ShellBuilder.c.s
+.PHONY : src/ShellBuilder.c.s
 
 # Help Target
 help:
@@ -189,9 +261,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/printUtils.o"
-	@echo "... src/printUtils.i"
-	@echo "... src/printUtils.s"
+	@echo "... src/CommandExecutor.o"
+	@echo "... src/CommandExecutor.i"
+	@echo "... src/CommandExecutor.s"
+	@echo "... src/ErrorHandler.o"
+	@echo "... src/ErrorHandler.i"
+	@echo "... src/ErrorHandler.s"
+	@echo "... src/PrintUtils.o"
+	@echo "... src/PrintUtils.i"
+	@echo "... src/PrintUtils.s"
+	@echo "... src/ShellBuilder.o"
+	@echo "... src/ShellBuilder.i"
+	@echo "... src/ShellBuilder.s"
 .PHONY : help
 
 

@@ -9,7 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/quinndu0/CLionProjects/MyShell/main.c" "CMakeFiles/MyShell.dir/main.c.o" "gcc" "CMakeFiles/MyShell.dir/main.c.o.d"
-  "/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c" "CMakeFiles/MyShell.dir/src/printUtils.c.o" "gcc" "CMakeFiles/MyShell.dir/src/printUtils.c.o.d"
+  "/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c" "CMakeFiles/MyShell.dir/src/CommandExecutor.c.o" "gcc" "CMakeFiles/MyShell.dir/src/CommandExecutor.c.o.d"
+  "/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c" "CMakeFiles/MyShell.dir/src/ErrorHandler.c.o" "gcc" "CMakeFiles/MyShell.dir/src/ErrorHandler.c.o.d"
+  "/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c" "CMakeFiles/MyShell.dir/src/PrintUtils.c.o" "gcc" "CMakeFiles/MyShell.dir/src/PrintUtils.c.o.d"
+  "/mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c" "CMakeFiles/MyShell.dir/src/ShellBuilder.c.o" "gcc" "CMakeFiles/MyShell.dir/src/ShellBuilder.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

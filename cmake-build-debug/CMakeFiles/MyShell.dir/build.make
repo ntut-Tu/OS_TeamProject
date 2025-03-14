@@ -83,33 +83,81 @@ CMakeFiles/MyShell.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/main.c -o CMakeFiles/MyShell.dir/main.c.s
 
-CMakeFiles/MyShell.dir/src/printUtils.c.o: CMakeFiles/MyShell.dir/flags.make
-CMakeFiles/MyShell.dir/src/printUtils.c.o: /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c
-CMakeFiles/MyShell.dir/src/printUtils.c.o: CMakeFiles/MyShell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyShell.dir/src/printUtils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyShell.dir/src/printUtils.c.o -MF CMakeFiles/MyShell.dir/src/printUtils.c.o.d -o CMakeFiles/MyShell.dir/src/printUtils.c.o -c /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c
+CMakeFiles/MyShell.dir/src/PrintUtils.c.o: CMakeFiles/MyShell.dir/flags.make
+CMakeFiles/MyShell.dir/src/PrintUtils.c.o: /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c
+CMakeFiles/MyShell.dir/src/PrintUtils.c.o: CMakeFiles/MyShell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyShell.dir/src/PrintUtils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyShell.dir/src/PrintUtils.c.o -MF CMakeFiles/MyShell.dir/src/PrintUtils.c.o.d -o CMakeFiles/MyShell.dir/src/PrintUtils.c.o -c /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c
 
-CMakeFiles/MyShell.dir/src/printUtils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyShell.dir/src/printUtils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c > CMakeFiles/MyShell.dir/src/printUtils.c.i
+CMakeFiles/MyShell.dir/src/PrintUtils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyShell.dir/src/PrintUtils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c > CMakeFiles/MyShell.dir/src/PrintUtils.c.i
 
-CMakeFiles/MyShell.dir/src/printUtils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/src/printUtils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/printUtils.c -o CMakeFiles/MyShell.dir/src/printUtils.c.s
+CMakeFiles/MyShell.dir/src/PrintUtils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/src/PrintUtils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/PrintUtils.c -o CMakeFiles/MyShell.dir/src/PrintUtils.c.s
+
+CMakeFiles/MyShell.dir/src/ShellBuilder.c.o: CMakeFiles/MyShell.dir/flags.make
+CMakeFiles/MyShell.dir/src/ShellBuilder.c.o: /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c
+CMakeFiles/MyShell.dir/src/ShellBuilder.c.o: CMakeFiles/MyShell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MyShell.dir/src/ShellBuilder.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyShell.dir/src/ShellBuilder.c.o -MF CMakeFiles/MyShell.dir/src/ShellBuilder.c.o.d -o CMakeFiles/MyShell.dir/src/ShellBuilder.c.o -c /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c
+
+CMakeFiles/MyShell.dir/src/ShellBuilder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyShell.dir/src/ShellBuilder.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c > CMakeFiles/MyShell.dir/src/ShellBuilder.c.i
+
+CMakeFiles/MyShell.dir/src/ShellBuilder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/src/ShellBuilder.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ShellBuilder.c -o CMakeFiles/MyShell.dir/src/ShellBuilder.c.s
+
+CMakeFiles/MyShell.dir/src/CommandExecutor.c.o: CMakeFiles/MyShell.dir/flags.make
+CMakeFiles/MyShell.dir/src/CommandExecutor.c.o: /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c
+CMakeFiles/MyShell.dir/src/CommandExecutor.c.o: CMakeFiles/MyShell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MyShell.dir/src/CommandExecutor.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyShell.dir/src/CommandExecutor.c.o -MF CMakeFiles/MyShell.dir/src/CommandExecutor.c.o.d -o CMakeFiles/MyShell.dir/src/CommandExecutor.c.o -c /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c
+
+CMakeFiles/MyShell.dir/src/CommandExecutor.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyShell.dir/src/CommandExecutor.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c > CMakeFiles/MyShell.dir/src/CommandExecutor.c.i
+
+CMakeFiles/MyShell.dir/src/CommandExecutor.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/src/CommandExecutor.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/CommandExecutor.c -o CMakeFiles/MyShell.dir/src/CommandExecutor.c.s
+
+CMakeFiles/MyShell.dir/src/ErrorHandler.c.o: CMakeFiles/MyShell.dir/flags.make
+CMakeFiles/MyShell.dir/src/ErrorHandler.c.o: /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c
+CMakeFiles/MyShell.dir/src/ErrorHandler.c.o: CMakeFiles/MyShell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/MyShell.dir/src/ErrorHandler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyShell.dir/src/ErrorHandler.c.o -MF CMakeFiles/MyShell.dir/src/ErrorHandler.c.o.d -o CMakeFiles/MyShell.dir/src/ErrorHandler.c.o -c /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c
+
+CMakeFiles/MyShell.dir/src/ErrorHandler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyShell.dir/src/ErrorHandler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c > CMakeFiles/MyShell.dir/src/ErrorHandler.c.i
+
+CMakeFiles/MyShell.dir/src/ErrorHandler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyShell.dir/src/ErrorHandler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/quinndu0/CLionProjects/MyShell/src/ErrorHandler.c -o CMakeFiles/MyShell.dir/src/ErrorHandler.c.s
 
 # Object files for target MyShell
 MyShell_OBJECTS = \
 "CMakeFiles/MyShell.dir/main.c.o" \
-"CMakeFiles/MyShell.dir/src/printUtils.c.o"
+"CMakeFiles/MyShell.dir/src/PrintUtils.c.o" \
+"CMakeFiles/MyShell.dir/src/ShellBuilder.c.o" \
+"CMakeFiles/MyShell.dir/src/CommandExecutor.c.o" \
+"CMakeFiles/MyShell.dir/src/ErrorHandler.c.o"
 
 # External object files for target MyShell
 MyShell_EXTERNAL_OBJECTS =
 
 MyShell: CMakeFiles/MyShell.dir/main.c.o
-MyShell: CMakeFiles/MyShell.dir/src/printUtils.c.o
+MyShell: CMakeFiles/MyShell.dir/src/PrintUtils.c.o
+MyShell: CMakeFiles/MyShell.dir/src/ShellBuilder.c.o
+MyShell: CMakeFiles/MyShell.dir/src/CommandExecutor.c.o
+MyShell: CMakeFiles/MyShell.dir/src/ErrorHandler.c.o
 MyShell: CMakeFiles/MyShell.dir/build.make
 MyShell: CMakeFiles/MyShell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable MyShell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable MyShell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyShell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
