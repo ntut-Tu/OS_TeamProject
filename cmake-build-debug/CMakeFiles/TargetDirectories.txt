@@ -1,0 +1,3 @@
+/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles/MyShell.dir
+/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/quinndu0/CLionProjects/MyShell/cmake-build-debug/CMakeFiles/rebuild_cache.dir
