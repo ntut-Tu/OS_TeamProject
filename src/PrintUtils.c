@@ -7,11 +7,20 @@
 #include "../include/PrintUtils.h"
 
 void runtimePrint(const char *message, ...) {
-    printf("\033[33m[Runtime Debug]: ");
+    printf("\033[33m[Runtime Log]: ");
     va_list args;
     va_start(args, message);
     vprintf(message, args);
     va_end(args);
+    printf("\033[0m\n");
+}
+
+void runtimeCharPrint(const char *message, char *args[]) {
+    printf("\033[33m[Runtime Log]: ");
+    printf("%s", message);
+    for(int i = 0; args[i] != NULL; i++) {
+        printf("%s ", args[i]);
+    }
     printf("\033[0m\n");
 }
 
