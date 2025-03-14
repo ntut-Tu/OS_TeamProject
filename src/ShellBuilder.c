@@ -15,7 +15,7 @@
 static int verboseMode = 0;
 
 void printWelcome() {
-    char *welcome = "Welcome to myShell!\nType \033[33mbye\033[0m to exit.\nUse \033[33m--verbose\033[0m or \033[33m-v\033[0m in argv[] to enable full logging.\n";
+    char *welcome = "Welcome to myShell!\nType \033[33mbye\033[0m to exit.\nUse \033[33m--verbose\033[0m or \033[33m-v\033[0m in argv[] before build to enable full logging.\n";
     printDivider( getLongestLine(welcome));
     printf("%s", welcome);
     printDivider( getLongestLine(welcome));
@@ -35,16 +35,17 @@ void shellRun() {
 
     while (1) {
         printf("myShell> ");
-        fgets(input, 256, stdin);
+        if (!fgets(input, 256, stdin)) continue;
 
-        if (input[strlen(input) - 1] == '\n') {
-            input[strlen(input) - 1] = '\0'; // 不然要用memset清理字元陣列
+        if (input[strlen(input) - 1] == '\n') input[strlen(input) - 1] = '\0';
+
+        if (strcmp(input, "bye") == 0) break;
+
+        int cmdCount;
+        Command *commands = parseCommand(input, &cmdCount);
+        if (commands) {
+            executeCommand(commands, cmdCount, verboseMode);
+            freeCommands(commands, cmdCount);
         }
-
-        if (strcmp(input, "bye") == 0) {
-            break;
-        }
-
-        executeCommand(input, verboseMode);
     }
 }
