@@ -7,3 +7,14 @@
     - III. Creating a history feature
     - IV. Redirecting input and output
     - V. Communication via a pipe
+
+
+test cases:
+```bash
+echo "hello world" > input.txt
+ls -l | grep .c
+cat input.txt | grep foo > output.txt
+ls > output.txt
+cat output.txt
+sleep 5 &
+```

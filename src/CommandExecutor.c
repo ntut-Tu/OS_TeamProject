@@ -1,4 +1,4 @@
-    //
+//
 // Created by quinndu0 on 2025/3/14.
 //
 #include "../include/CommandExecutor.h"
@@ -11,14 +11,23 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-    Command *parseCommand(const char *input, int *cmdCount) {
+Command *parseCommand(const char *input, int *cmdCount) {
     char *inputCopy = strdup(input);
     if (!inputCopy) {
         perror("strdup failed");
         return NULL;
     }
 
-    Command *commands = malloc(sizeof(Command) * 10); // 最多 10 個管線命令
+    Command *commands = malloc(sizeof(Command) * 10);
+    for (int i = 0; i < 10; i++) {
+        commands[i].cmd = NULL;
+        commands[i].args = malloc(sizeof(char *) * 100);
+        commands[i].inputFile = NULL;
+        commands[i].outputFile = NULL;
+        commands[i].appendMode = 0;
+        commands[i].background = 0;
+    }
+
     *cmdCount = 0;
 
     char *token = strtok(inputCopy, " ");
@@ -80,36 +89,58 @@ void executeCommand(Command *commands, int cmdCount, int verboseMode) {
 
         pid_t pid = fork();
         if (pid == 0) { // 子進程
-            if (commands[i].inputFile) { // 處理 `<` 輸入重定向
+            if (verboseMode) runtimePrint("Process %d executing: %s", getpid(), commands[i].args[0]);
+
+            // 確保 args 以 NULL 結尾
+            int j = 0;
+            while (commands[i].args[j] != NULL) j++;
+            commands[i].args[j] = NULL;
+
+            // 處理 `<` 輸入重定向
+            if (commands[i].inputFile) {
                 int fd = open(commands[i].inputFile, O_RDONLY);
-                if (fd < 0) { perror("open failed"); exit(1); }
+                if (fd < 0) {
+                    perror("open failed");
+                    exit(1);
+                }
                 dup2(fd, STDIN_FILENO);
                 close(fd);
             }
-            if (commands[i].outputFile) { // 處理 `>` `>>` 輸出重定向
+            // 處理 `>` 或 `>>` 輸出重定向
+            if (commands[i].outputFile) {
                 int flags = O_WRONLY | O_CREAT | (commands[i].appendMode ? O_APPEND : O_TRUNC);
                 int fd = open(commands[i].outputFile, flags, 0644);
-                if (fd < 0) { perror("open failed"); exit(1); }
+                if (fd < 0) {
+                    perror("open failed");
+                    exit(1);
+                }
                 dup2(fd, STDOUT_FILENO);
                 close(fd);
             }
-            if (i > 0) { // 讀取上個指令的輸出
+            // 處理 `|` 管線
+            if (i > 0) {
                 dup2(pipes[i - 1][0], STDIN_FILENO);
                 close(pipes[i - 1][0]);
+                close(pipes[i - 1][1]);
             }
-            if (i < cmdCount - 1) { // 寫入下一個指令的輸入
+            if (i < cmdCount - 1) {
                 dup2(pipes[i][1], STDOUT_FILENO);
                 close(pipes[i][1]);
+                close(pipes[i][0]);
             }
 
             execvp(commands[i].args[0], commands[i].args);
             perror("execvp failed");
             exit(1);
         }
-        if (i > 0) close(pipes[i - 1][0]); // 關閉管道讀端
-        if (i < cmdCount - 1) close(pipes[i][1]); // 關閉管道寫端
 
-        if (!commands[i].background) wait(NULL); // 前景執行
+        if (pid > 0) { // 父進程
+            if (i > 0) {
+                close(pipes[i - 1][0]);
+                close(pipes[i - 1][1]);
+            }
+            if (!commands[i].background) wait(NULL);
+        }
     }
 }
 
