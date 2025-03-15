@@ -17,4 +17,5 @@ cat input.txt | grep foo > output.txt
 ls > output.txt
 cat output.txt
 sleep 5 &
+history 
 ```
