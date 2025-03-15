@@ -12,7 +12,7 @@
 #include <fcntl.h>
 
 Command *parseCommand(const char *input, int *cmdCount) {
-    char *inputCopy = strdup(input);
+    char *inputCopy = strdup(input);    // malloc + strcpy
     if (!inputCopy) {
         perror("strdup failed");
         return NULL;
@@ -26,7 +26,7 @@ Command *parseCommand(const char *input, int *cmdCount) {
         commands[i].outputFile = NULL;
         commands[i].appendMode = 0;
         commands[i].background = 0;
-    }
+    }// 重新初始化，malloc到新的記憶體有時會包含亂碼的內容
 
     *cmdCount = 0;
 
@@ -58,7 +58,7 @@ Command *parseCommand(const char *input, int *cmdCount) {
         }
         token = strtok(NULL, " ");
     }
-    commands[*cmdCount].args[argCount] = NULL; // NULL 結尾
+    commands[*cmdCount].args[argCount] = NULL; // NULL 結尾，否則使用 | 時會出現crash
     (*cmdCount)++;
 
     free(inputCopy);

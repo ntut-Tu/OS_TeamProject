@@ -5,6 +5,7 @@
 #include "../include/PrintUtils.h"
 #include "../include/CommandExecutor.h"
 #include "../include/ErrorHandler.h"
+#include "../include/HistoryManager.h"
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -36,11 +37,22 @@ void shellRun() {
     while (1) {
         printf("myShell> ");
         if (!fgets(input, 256, stdin)) continue;
-
         if (input[strlen(input) - 1] == '\n') input[strlen(input) - 1] = '\0';
-
         if (strcmp(input, "bye") == 0) break;
 
+        // history
+        char *historyCmd = getHistoryCommand(input);
+        if (historyCmd) {
+            printf("%s\n", historyCmd);
+            strcpy(input, historyCmd);
+        }
+        if (strcmp(input, "history") == 0) {
+            printHistory();
+            continue;
+        }
+        addToHistory(input);
+
+        //  normal command
         int cmdCount;
         Command *commands = parseCommand(input, &cmdCount);
         if (commands) {

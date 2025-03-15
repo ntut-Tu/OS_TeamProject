@@ -10,4 +10,6 @@ add_executable(MyShell main.c
         src/CommandExecutor.c
         src/ErrorHandler.c
         src/ShellBuilder.c
-        include/ErrorHandler.h)
+        include/ErrorHandler.h
+        include/HistoryManager.h
+        src/HistoryManager.c)
