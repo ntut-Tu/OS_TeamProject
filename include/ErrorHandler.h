@@ -5,6 +5,6 @@
 #ifndef MYSHELL_ERRORHANDLER_H
 #define MYSHELL_ERRORHANDLER_H
 
-void fileCheckError();
+void checkError();
 
 #endif //MYSHELL_ERRORHANDLER_H

@@ -142,6 +142,9 @@ void executeCommand(Command *commands, int cmdCount, int verboseMode) {
             if (!commands[i].background) wait(NULL);
         }
     }
+    if(verboseMode){    // 也許能抓到mem相關問題?
+        checkError();
+    }
 }
 
 void freeCommands(Command *commands, int cmdCount) {
